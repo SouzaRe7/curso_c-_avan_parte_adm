@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAcompanhaVendaVendedor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpDtInicial = new System.Windows.Forms.DateTimePicker();
             this.dtpDtFinal = new System.Windows.Forms.DateTimePicker();
@@ -37,12 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.grdVendasVendedores = new System.Windows.Forms.GroupBox();
-            this.grdModelos = new System.Windows.Forms.DataGridView();
+            this.grdVendas = new System.Windows.Forms.DataGridView();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grdVendasVendedores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdModelos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVendas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,7 +59,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1112, 235);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar vendas por vendedor";
             // 
@@ -127,25 +128,25 @@
             // 
             // grdVendasVendedores
             // 
-            this.grdVendasVendedores.Controls.Add(this.grdModelos);
+            this.grdVendasVendedores.Controls.Add(this.grdVendas);
             this.grdVendasVendedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdVendasVendedores.Location = new System.Drawing.Point(12, 284);
             this.grdVendasVendedores.Name = "grdVendasVendedores";
             this.grdVendasVendedores.Size = new System.Drawing.Size(1112, 410);
-            this.grdVendasVendedores.TabIndex = 4;
+            this.grdVendasVendedores.TabIndex = 0;
             this.grdVendasVendedores.TabStop = false;
             this.grdVendasVendedores.Text = "Vendas encontradas";
             // 
-            // grdModelos
+            // grdVendas
             // 
-            this.grdModelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdModelos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdModelos.Location = new System.Drawing.Point(3, 30);
-            this.grdModelos.Name = "grdModelos";
-            this.grdModelos.RowHeadersWidth = 51;
-            this.grdModelos.RowTemplate.Height = 24;
-            this.grdModelos.Size = new System.Drawing.Size(1106, 377);
-            this.grdModelos.TabIndex = 0;
+            this.grdVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVendas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdVendas.Location = new System.Drawing.Point(3, 30);
+            this.grdVendas.Name = "grdVendas";
+            this.grdVendas.RowHeadersWidth = 51;
+            this.grdVendas.RowTemplate.Height = 24;
+            this.grdVendas.Size = new System.Drawing.Size(1106, 377);
+            this.grdVendas.TabIndex = 0;
             // 
             // txtTotal
             // 
@@ -175,6 +176,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grdVendasVendedores);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAcompanhaVendaVendedor";
@@ -183,7 +185,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grdVendasVendedores.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdModelos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVendas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +202,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grdVendasVendedores;
-        private System.Windows.Forms.DataGridView grdModelos;
+        private System.Windows.Forms.DataGridView grdVendas;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label2;
     }

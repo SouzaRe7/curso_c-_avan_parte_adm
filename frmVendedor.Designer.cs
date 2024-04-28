@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendedor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
+            this.mkCpf = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mkTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -38,19 +46,12 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.mkTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.mkCpf = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.chkStatus = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.grdVendedores = new System.Windows.Forms.DataGridView();
+            this.chkStatusFiltro = new System.Windows.Forms.CheckBox();
             this.txtNomeFiltro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.grdVendedores = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.chkStatusFiltro = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVendedores)).BeginInit();
@@ -78,9 +79,72 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(910, 320);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do vendedor";
+            // 
+            // chkStatus
+            // 
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.Location = new System.Drawing.Point(687, 62);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(87, 33);
+            this.chkStatus.TabIndex = 3;
+            this.chkStatus.Text = "Ativo";
+            this.chkStatus.UseVisualStyleBackColor = true;
+            // 
+            // mkCpf
+            // 
+            this.mkCpf.Location = new System.Drawing.Point(687, 113);
+            this.mkCpf.Mask = "000.000.000-00";
+            this.mkCpf.Name = "mkCpf";
+            this.mkCpf.Size = new System.Drawing.Size(198, 34);
+            this.mkCpf.TabIndex = 4;
+            this.mkCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(618, 116);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 29);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "CPF";
+            // 
+            // mkTelefone
+            // 
+            this.mkTelefone.Location = new System.Drawing.Point(687, 171);
+            this.mkTelefone.Mask = "(99) 00000-0000";
+            this.mkTelefone.Name = "mkTelefone";
+            this.mkTelefone.Size = new System.Drawing.Size(198, 34);
+            this.mkTelefone.TabIndex = 5;
+            this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(569, 174);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 29);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Telefone";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(138, 171);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(398, 34);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 29);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "E-mail";
             // 
             // btnExcluir
             // 
@@ -168,69 +232,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 171);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 29);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "E-mail";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(138, 171);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(398, 34);
-            this.txtEmail.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(569, 174);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 29);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Telefone";
-            // 
-            // mkTelefone
-            // 
-            this.mkTelefone.Location = new System.Drawing.Point(687, 171);
-            this.mkTelefone.Mask = "(99) 00000-0000";
-            this.mkTelefone.Name = "mkTelefone";
-            this.mkTelefone.Size = new System.Drawing.Size(198, 34);
-            this.mkTelefone.TabIndex = 5;
-            this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // mkCpf
-            // 
-            this.mkCpf.Location = new System.Drawing.Point(687, 113);
-            this.mkCpf.Mask = "000.000.000-00";
-            this.mkCpf.Name = "mkCpf";
-            this.mkCpf.Size = new System.Drawing.Size(198, 34);
-            this.mkCpf.TabIndex = 4;
-            this.mkCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(618, 116);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "CPF";
-            // 
-            // chkStatus
-            // 
-            this.chkStatus.AutoSize = true;
-            this.chkStatus.Location = new System.Drawing.Point(687, 62);
-            this.chkStatus.Name = "chkStatus";
-            this.chkStatus.Size = new System.Drawing.Size(87, 33);
-            this.chkStatus.TabIndex = 3;
-            this.chkStatus.Text = "Ativo";
-            this.chkStatus.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.chkStatusFiltro);
@@ -246,22 +247,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtro vendedor";
             // 
-            // grdVendedores
+            // chkStatusFiltro
             // 
-            this.grdVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdVendedores.Location = new System.Drawing.Point(0, 133);
-            this.grdVendedores.Name = "grdVendedores";
-            this.grdVendedores.RowHeadersWidth = 51;
-            this.grdVendedores.RowTemplate.Height = 24;
-            this.grdVendedores.Size = new System.Drawing.Size(910, 293);
-            this.grdVendedores.TabIndex = 0;
+            this.chkStatusFiltro.AutoSize = true;
+            this.chkStatusFiltro.Location = new System.Drawing.Point(592, 68);
+            this.chkStatusFiltro.Name = "chkStatusFiltro";
+            this.chkStatusFiltro.Size = new System.Drawing.Size(87, 33);
+            this.chkStatusFiltro.TabIndex = 11;
+            this.chkStatusFiltro.Text = "Ativo";
+            this.chkStatusFiltro.UseVisualStyleBackColor = true;
             // 
             // txtNomeFiltro
             // 
             this.txtNomeFiltro.Location = new System.Drawing.Point(123, 68);
             this.txtNomeFiltro.Name = "txtNomeFiltro";
             this.txtNomeFiltro.Size = new System.Drawing.Size(398, 34);
-            this.txtNomeFiltro.TabIndex = 12;
+            this.txtNomeFiltro.TabIndex = 10;
             // 
             // label4
             // 
@@ -272,6 +273,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Nome";
             // 
+            // grdVendedores
+            // 
+            this.grdVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVendedores.Location = new System.Drawing.Point(0, 133);
+            this.grdVendedores.Name = "grdVendedores";
+            this.grdVendedores.RowHeadersWidth = 51;
+            this.grdVendedores.RowTemplate.Height = 24;
+            this.grdVendedores.Size = new System.Drawing.Size(910, 293);
+            this.grdVendedores.TabIndex = 0;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -281,16 +292,6 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Nome";
             // 
-            // chkStatusFiltro
-            // 
-            this.chkStatusFiltro.AutoSize = true;
-            this.chkStatusFiltro.Location = new System.Drawing.Point(592, 68);
-            this.chkStatusFiltro.Name = "chkStatusFiltro";
-            this.chkStatusFiltro.Size = new System.Drawing.Size(87, 33);
-            this.chkStatusFiltro.TabIndex = 10;
-            this.chkStatusFiltro.Text = "Ativo";
-            this.chkStatusFiltro.UseVisualStyleBackColor = true;
-            // 
             // frmVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -298,6 +299,7 @@
             this.ClientSize = new System.Drawing.Size(942, 782);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmVendedor";

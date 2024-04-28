@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAcesso = new System.Windows.Forms.Button();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btnAcesso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,9 +61,28 @@
             this.groupBox2.Location = new System.Drawing.Point(270, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(489, 305);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Entre com seus dados";
+            // 
+            // btnAcesso
+            // 
+            this.btnAcesso.BackColor = System.Drawing.Color.Green;
+            this.btnAcesso.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAcesso.Location = new System.Drawing.Point(140, 231);
+            this.btnAcesso.Name = "btnAcesso";
+            this.btnAcesso.Size = new System.Drawing.Size(331, 46);
+            this.btnAcesso.TabIndex = 3;
+            this.btnAcesso.Text = "Acesso";
+            this.btnAcesso.UseVisualStyleBackColor = false;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(140, 149);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(331, 34);
+            this.txtSenha.TabIndex = 2;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtLogin
             // 
@@ -90,25 +109,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Login";
             // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(140, 149);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(331, 34);
-            this.txtSenha.TabIndex = 2;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
-            // btnAcesso
-            // 
-            this.btnAcesso.BackColor = System.Drawing.Color.Green;
-            this.btnAcesso.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcesso.Location = new System.Drawing.Point(140, 231);
-            this.btnAcesso.Name = "btnAcesso";
-            this.btnAcesso.Size = new System.Drawing.Size(331, 46);
-            this.btnAcesso.TabIndex = 3;
-            this.btnAcesso.Text = "Acesso";
-            this.btnAcesso.UseVisualStyleBackColor = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -116,6 +116,7 @@
             this.ClientSize = new System.Drawing.Size(774, 334);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
