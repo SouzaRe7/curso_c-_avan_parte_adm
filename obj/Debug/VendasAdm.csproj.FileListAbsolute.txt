@@ -1,0 +1,11 @@
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\VendasAdm.exe.config
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\VendasAdm.exe
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\VendasAdm.pdb
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmLogin.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.Properties.Resources.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.exe
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.pdb
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmMarca.resources
