@@ -9,3 +9,6 @@ C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.csproj.Cor
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.exe
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.pdb
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmMarca.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmAcompanhaVendaVendedor.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmModelo.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmVendedor.resources
