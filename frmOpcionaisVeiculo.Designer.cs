@@ -52,8 +52,8 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 220);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(910, 326);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.Size = new System.Drawing.Size(847, 326);
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcionais do veículo cadastrados";
             // 
@@ -65,7 +65,7 @@
             this.grdOpcionais.Name = "grdOpcionais";
             this.grdOpcionais.RowHeadersWidth = 51;
             this.grdOpcionais.RowTemplate.Height = 24;
-            this.grdOpcionais.Size = new System.Drawing.Size(904, 293);
+            this.grdOpcionais.Size = new System.Drawing.Size(841, 293);
             this.grdOpcionais.TabIndex = 0;
             // 
             // groupBox1
@@ -82,16 +82,16 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 202);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.Size = new System.Drawing.Size(847, 202);
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados opcionais do veículo ";
+            this.groupBox1.Text = "Opcionais do veículo ";
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.Red;
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcluir.Location = new System.Drawing.Point(727, 145);
+            this.btnExcluir.Location = new System.Drawing.Point(658, 136);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(163, 38);
             this.btnExcluir.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAlterar.Location = new System.Drawing.Point(521, 145);
+            this.btnAlterar.Location = new System.Drawing.Point(452, 136);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(163, 38);
             this.btnAlterar.TabIndex = 4;
@@ -113,7 +113,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Gray;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancelar.Location = new System.Drawing.Point(310, 145);
+            this.btnCancelar.Location = new System.Drawing.Point(241, 136);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(163, 38);
             this.btnCancelar.TabIndex = 3;
@@ -124,7 +124,7 @@
             // 
             this.btnCadastar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCadastar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCadastar.Location = new System.Drawing.Point(114, 145);
+            this.btnCadastar.Location = new System.Drawing.Point(45, 136);
             this.btnCadastar.Name = "btnCadastar";
             this.btnCadastar.Size = new System.Drawing.Size(163, 38);
             this.btnCadastar.TabIndex = 2;
@@ -133,7 +133,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(194, 95);
+            this.txtNome.Location = new System.Drawing.Point(125, 86);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(696, 34);
             this.txtNome.TabIndex = 1;
@@ -141,7 +141,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(109, 94);
+            this.label3.Location = new System.Drawing.Point(40, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 29);
             this.label3.TabIndex = 0;
@@ -150,7 +150,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(194, 53);
+            this.txtCodigo.Location = new System.Drawing.Point(125, 44);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(126, 34);
             this.txtCodigo.TabIndex = 0;
@@ -158,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 95);
+            this.label2.Location = new System.Drawing.Point(40, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 0;
@@ -167,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 53);
+            this.label1.Location = new System.Drawing.Point(27, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 0;
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 563);
+            this.ClientSize = new System.Drawing.Size(879, 563);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

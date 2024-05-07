@@ -37,13 +37,13 @@
             this.cbVendedor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.grdVendasVendedores = new System.Windows.Forms.GroupBox();
-            this.grdVendas = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grdVendasVendedor = new System.Windows.Forms.DataGridView();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.grdVendasVendedores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVendas)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVendasVendedor)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -126,27 +126,27 @@
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
-            // grdVendasVendedores
+            // groupBox2
             // 
-            this.grdVendasVendedores.Controls.Add(this.grdVendas);
-            this.grdVendasVendedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdVendasVendedores.Location = new System.Drawing.Point(12, 284);
-            this.grdVendasVendedores.Name = "grdVendasVendedores";
-            this.grdVendasVendedores.Size = new System.Drawing.Size(1112, 410);
-            this.grdVendasVendedores.TabIndex = 0;
-            this.grdVendasVendedores.TabStop = false;
-            this.grdVendasVendedores.Text = "Vendas encontradas";
+            this.groupBox2.Controls.Add(this.grdVendasVendedor);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 284);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1112, 410);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Vendas encontradas";
             // 
-            // grdVendas
+            // grdVendasVendedor
             // 
-            this.grdVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdVendas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVendas.Location = new System.Drawing.Point(3, 30);
-            this.grdVendas.Name = "grdVendas";
-            this.grdVendas.RowHeadersWidth = 51;
-            this.grdVendas.RowTemplate.Height = 24;
-            this.grdVendas.Size = new System.Drawing.Size(1106, 377);
-            this.grdVendas.TabIndex = 0;
+            this.grdVendasVendedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVendasVendedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdVendasVendedor.Location = new System.Drawing.Point(3, 30);
+            this.grdVendasVendedor.Name = "grdVendasVendedor";
+            this.grdVendasVendedor.RowHeadersWidth = 51;
+            this.grdVendasVendedor.RowTemplate.Height = 24;
+            this.grdVendasVendedor.Size = new System.Drawing.Size(1106, 377);
+            this.grdVendasVendedor.TabIndex = 0;
             // 
             // txtTotal
             // 
@@ -174,7 +174,7 @@
             this.ClientSize = new System.Drawing.Size(1136, 758);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.grdVendasVendedores);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -184,8 +184,8 @@
             this.Text = "Acompanha vendas vendedor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.grdVendasVendedores.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdVendas)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVendasVendedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,8 +201,8 @@
         private System.Windows.Forms.DateTimePicker dtpDtFinal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox grdVendasVendedores;
-        private System.Windows.Forms.DataGridView grdVendas;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView grdVendasVendedor;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label2;
     }
