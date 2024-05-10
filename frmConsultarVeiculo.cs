@@ -15,6 +15,7 @@ namespace VendasAdm
         public frmConsultarVeiculo()
         {
             InitializeComponent();
+            Util.ConfigureFormBorderStyle(this);
         }
     }
 }

@@ -12,3 +12,10 @@ C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmMarca.r
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmAcompanhaVendaVendedor.resources
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmModelo.resources
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmVendedor.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmAcompanhaVendaVeiculo.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmConsultarVeiculo.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmCor.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmOpcionaisVeiculo.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmPrincipal.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmSubirOnLine.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmVeiculo.resources

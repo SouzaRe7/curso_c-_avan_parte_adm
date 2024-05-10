@@ -119,6 +119,7 @@
             this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -130,6 +131,7 @@
             this.btnAlterar.TabIndex = 5;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCancelar
             // 
@@ -141,6 +143,7 @@
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCadastar
             // 
@@ -152,6 +155,7 @@
             this.btnCadastar.TabIndex = 3;
             this.btnCadastar.Text = "Cadastrar";
             this.btnCadastar.UseVisualStyleBackColor = false;
+            this.btnCadastar.Click += new System.EventHandler(this.btnCadastar_Click);
             // 
             // txtNome
             // 
@@ -208,6 +212,7 @@
             this.Name = "frmModelo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar modelo";
+            this.Load += new System.EventHandler(this.frmModelo_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdModelos)).EndInit();
             this.groupBox1.ResumeLayout(false);

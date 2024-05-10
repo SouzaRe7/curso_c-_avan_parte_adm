@@ -30,9 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkGravarOffline = new System.Windows.Forms.CheckBox();
             this.cbSituacao = new System.Windows.Forms.ComboBox();
             this.cbQtdPortas = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lstOpcoesSelecionadas = new System.Windows.Forms.ListBox();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.cbOpcionais = new System.Windows.Forms.ComboBox();
             this.cbDirecao = new System.Windows.Forms.ComboBox();
             this.cbCombustivel = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -66,16 +71,13 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbOpcionais = new System.Windows.Forms.ComboBox();
-            this.btnAdicionar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.lstOpcoesSelecionadas = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkGravarOffline);
             this.groupBox1.Controls.Add(this.cbSituacao);
             this.groupBox1.Controls.Add(this.cbQtdPortas);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -120,6 +122,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do veícilo";
             // 
+            // chkGravarOffline
+            // 
+            this.chkGravarOffline.AutoSize = true;
+            this.chkGravarOffline.Location = new System.Drawing.Point(108, 464);
+            this.chkGravarOffline.Name = "chkGravarOffline";
+            this.chkGravarOffline.Size = new System.Drawing.Size(177, 33);
+            this.chkGravarOffline.TabIndex = 23;
+            this.chkGravarOffline.Text = "Gravar offline";
+            this.chkGravarOffline.UseVisualStyleBackColor = true;
+            // 
             // cbSituacao
             // 
             this.cbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -163,6 +175,46 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcionais";
+            // 
+            // lstOpcoesSelecionadas
+            // 
+            this.lstOpcoesSelecionadas.FormattingEnabled = true;
+            this.lstOpcoesSelecionadas.ItemHeight = 29;
+            this.lstOpcoesSelecionadas.Location = new System.Drawing.Point(8, 154);
+            this.lstOpcoesSelecionadas.Name = "lstOpcoesSelecionadas";
+            this.lstOpcoesSelecionadas.Size = new System.Drawing.Size(308, 294);
+            this.lstOpcoesSelecionadas.TabIndex = 0;
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.BackColor = System.Drawing.Color.Maroon;
+            this.btnRemover.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRemover.Location = new System.Drawing.Point(177, 100);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(139, 38);
+            this.btnRemover.TabIndex = 17;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = false;
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdicionar.Location = new System.Drawing.Point(8, 100);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(139, 38);
+            this.btnAdicionar.TabIndex = 16;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = false;
+            // 
+            // cbOpcionais
+            // 
+            this.cbOpcionais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOpcionais.FormattingEnabled = true;
+            this.cbOpcionais.Location = new System.Drawing.Point(8, 45);
+            this.cbOpcionais.Name = "cbOpcionais";
+            this.cbOpcionais.Size = new System.Drawing.Size(308, 37);
+            this.cbOpcionais.TabIndex = 15;
             // 
             // cbDirecao
             // 
@@ -314,6 +366,7 @@
             this.btnExcluir.TabIndex = 21;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -325,6 +378,7 @@
             this.btnAlterar.TabIndex = 20;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCancelar
             // 
@@ -336,6 +390,7 @@
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtMotor
             // 
@@ -361,6 +416,7 @@
             this.btnCadastar.TabIndex = 18;
             this.btnCadastar.Text = "Cadastrar";
             this.btnCadastar.UseVisualStyleBackColor = false;
+            this.btnCadastar.Click += new System.EventHandler(this.btnCadastar_Click);
             // 
             // label13
             // 
@@ -421,7 +477,6 @@
             // 
             // txtValorVenda
             // 
-            this.txtValorVenda.Enabled = false;
             this.txtValorVenda.Location = new System.Drawing.Point(725, 138);
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(163, 34);
@@ -429,7 +484,6 @@
             // 
             // txtValorCompra
             // 
-            this.txtValorCompra.Enabled = false;
             this.txtValorCompra.Location = new System.Drawing.Point(725, 91);
             this.txtValorCompra.Name = "txtValorCompra";
             this.txtValorCompra.Size = new System.Drawing.Size(163, 34);
@@ -470,46 +524,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
-            // cbOpcionais
-            // 
-            this.cbOpcionais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOpcionais.FormattingEnabled = true;
-            this.cbOpcionais.Location = new System.Drawing.Point(8, 45);
-            this.cbOpcionais.Name = "cbOpcionais";
-            this.cbOpcionais.Size = new System.Drawing.Size(308, 37);
-            this.cbOpcionais.TabIndex = 15;
-            // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAdicionar.Location = new System.Drawing.Point(8, 100);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(139, 38);
-            this.btnAdicionar.TabIndex = 16;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = false;
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.Maroon;
-            this.btnRemover.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRemover.Location = new System.Drawing.Point(177, 100);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(139, 38);
-            this.btnRemover.TabIndex = 17;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = false;
-            // 
-            // lstOpcoesSelecionadas
-            // 
-            this.lstOpcoesSelecionadas.FormattingEnabled = true;
-            this.lstOpcoesSelecionadas.ItemHeight = 29;
-            this.lstOpcoesSelecionadas.Location = new System.Drawing.Point(8, 154);
-            this.lstOpcoesSelecionadas.Name = "lstOpcoesSelecionadas";
-            this.lstOpcoesSelecionadas.Size = new System.Drawing.Size(308, 294);
-            this.lstOpcoesSelecionadas.TabIndex = 0;
-            // 
             // frmVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,6 +536,7 @@
             this.Name = "frmVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de veículo";
+            this.Load += new System.EventHandler(this.frmVeiculo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -572,5 +587,6 @@
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.ComboBox cbOpcionais;
+        private System.Windows.Forms.CheckBox chkGravarOffline;
     }
 }

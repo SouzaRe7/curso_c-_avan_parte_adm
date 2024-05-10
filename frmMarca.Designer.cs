@@ -75,6 +75,7 @@
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -86,6 +87,7 @@
             this.btnAlterar.TabIndex = 4;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCancelar
             // 
@@ -97,6 +99,7 @@
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCadastar
             // 
@@ -108,6 +111,7 @@
             this.btnCadastar.TabIndex = 2;
             this.btnCadastar.Text = "Cadastrar";
             this.btnCadastar.UseVisualStyleBackColor = false;
+            this.btnCadastar.Click += new System.EventHandler(this.btnCadastar_Click);
             // 
             // txtNome
             // 
@@ -186,6 +190,7 @@
             this.Name = "frmMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar marca";
+            this.Load += new System.EventHandler(this.frmMarca_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

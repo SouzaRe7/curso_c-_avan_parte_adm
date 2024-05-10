@@ -15,6 +15,7 @@ namespace VendasAdm
         public frmAcompanhaVendaVendedor()
         {
             InitializeComponent();
+            Util.ConfigureFormBorderStyle(this);
         }
     }
 }

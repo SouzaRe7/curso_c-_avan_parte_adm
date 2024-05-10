@@ -131,7 +131,6 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(138, 171);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(398, 34);
@@ -156,6 +155,7 @@
             this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -167,6 +167,7 @@
             this.btnAlterar.TabIndex = 8;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCancelar
             // 
@@ -178,6 +179,7 @@
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCadastar
             // 
@@ -189,6 +191,7 @@
             this.btnCadastar.TabIndex = 6;
             this.btnCadastar.Text = "Cadastrar";
             this.btnCadastar.UseVisualStyleBackColor = false;
+            this.btnCadastar.Click += new System.EventHandler(this.btnCadastar_Click);
             // 
             // txtNome
             // 
@@ -242,7 +245,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 359);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(910, 411);
+            this.groupBox2.Size = new System.Drawing.Size(910, 432);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtro vendedor";
@@ -296,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 782);
+            this.ClientSize = new System.Drawing.Size(942, 803);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -305,6 +308,7 @@
             this.Name = "frmVendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar vendedor";
+            this.Load += new System.EventHandler(this.frmVendedor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

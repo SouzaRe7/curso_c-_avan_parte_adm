@@ -75,6 +75,7 @@
             this.btnAcesso.TabIndex = 3;
             this.btnAcesso.Text = "Acesso";
             this.btnAcesso.UseVisualStyleBackColor = false;
+            this.btnAcesso.Click += new System.EventHandler(this.btnAcesso_Click);
             // 
             // txtSenha
             // 
