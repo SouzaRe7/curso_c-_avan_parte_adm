@@ -21,7 +21,7 @@ namespace VendasAdm
         private void frmVendedor_Load(object sender, EventArgs e)
         {
             Util.ConfiguraDataGridViewUtil(grdVendedores);
-            Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+            Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
         }
 
         private void btnCadastar_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace VendasAdm
             {
                 try
                 {
-                    Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+                    Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
                 }
                 catch
                 {
@@ -63,18 +63,28 @@ namespace VendasAdm
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+            Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
             LimparCamposVendedor();
+        }
+
+        private void grdVendedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
         #endregion
 
         #region Funções
 
-        private Dictionary<TextBox, string> DicionarioTextBoxVendedor()
+        private Dictionary<TextBox, string> DicionarioTextBoxVendedor(Util.CamposObg obg)
         {
             Dictionary<TextBox, string> dicionario = new Dictionary<TextBox, string>();
             dicionario.Add(txtNome, "Nome");
             dicionario.Add(txtEmail, "E-mail");
+
+            if (obg == Util.CamposObg.Obrigatorio)
+            {
+                dicionario.Add(txtCodigo, "Codigo");
+            }
             return dicionario;
         }
 
@@ -93,9 +103,9 @@ namespace VendasAdm
             return dicionario;
         }
 
-        private bool VerificarCamposVendedor() => Util.VerificarCamposUtil(DicionarioTextBoxVendedor(), DicionarioMaskedTextBoxVendedor(), new Dictionary<ComboBox, string>(), DicionarioCheckBoxVendedor());
+        private bool VerificarCamposVendedor() => Util.VerificarCamposUtil(DicionarioTextBoxVendedor(Util.CamposObg.NaoObrigatorio), DicionarioMaskedTextBoxVendedor(), null, DicionarioCheckBoxVendedor());
 
-        private void LimparCamposVendedor() => Util.LimparCamposUtil(DicionarioTextBoxVendedor(), DicionarioMaskedTextBoxVendedor(), new Dictionary<ComboBox, string>(), DicionarioCheckBoxVendedor());
+        private void LimparCamposVendedor() => Util.LimparCamposUtil(DicionarioTextBoxVendedor(Util.CamposObg.Obrigatorio), DicionarioMaskedTextBoxVendedor(), null, DicionarioCheckBoxVendedor());
 
         #endregion
     }

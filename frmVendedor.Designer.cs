@@ -285,6 +285,7 @@
             this.grdVendedores.RowTemplate.Height = 24;
             this.grdVendedores.Size = new System.Drawing.Size(910, 293);
             this.grdVendedores.TabIndex = 0;
+            this.grdVendedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdVendedores_CellClick);
             // 
             // label8
             // 

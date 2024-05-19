@@ -17,17 +17,10 @@ namespace VendasAdm
             InitializeComponent();
             Util.ConfigureFormBorderStyle(this);
         }
-        #region Globais
-        private enum CamposObg
-        {
-            Obrigatorio,
-            NaoObrigatorio
-        }
-        #endregion
         #region Eventos
         private void frmVeiculo_Load(object sender, EventArgs e)
         {
-            Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+            Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
         }
 
         private void btnCadastar_Click(object sender, EventArgs e)
@@ -57,7 +50,7 @@ namespace VendasAdm
             {
                 try
                 {
-                    Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+                    Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
                 }
                 catch
                 {
@@ -69,14 +62,24 @@ namespace VendasAdm
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+            Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
             LimparCamposVeiculo();
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
 
         #region Funções
 
-        private Dictionary<TextBox, string> DicionarioTextBoxVeiculo(CamposObg tipo)
+        private Dictionary<TextBox, string> DicionarioTextBoxVeiculo(Util.CamposObg obg)
         {
             Dictionary<TextBox, string> dicionario = new Dictionary<TextBox, string>();
             
@@ -87,15 +90,16 @@ namespace VendasAdm
             dicionario.Add(txtAnoFabricacao, "Ano fabricação");
             dicionario.Add(txtKm, "Km");
 
-            if (tipo == CamposObg.NaoObrigatorio)
+            if (obg == Util.CamposObg.Obrigatorio)
             {
                 dicionario.Add(txtPlaca, "Placa");
+                dicionario.Add(txtCodigo, "Codigo");
             }
 
             return dicionario;
         }
 
-        private Dictionary<ComboBox, string> DicionarioComboBoxVeiculo(CamposObg tipo)
+        private Dictionary<ComboBox, string> DicionarioComboBoxVeiculo(Util.CamposObg obg)
         {
             Dictionary<ComboBox, string> dicionario = new Dictionary<ComboBox, string>();
 
@@ -107,7 +111,7 @@ namespace VendasAdm
             dicionario.Add(cbQtdPortas, "Qtd portas");
             dicionario.Add(cbSituacao, "Situação");
 
-            if (tipo == CamposObg.NaoObrigatorio)
+            if (obg == Util.CamposObg.Obrigatorio)
             {
                 dicionario.Add(cbOpcionais, "Opcionais");
             }
@@ -115,9 +119,17 @@ namespace VendasAdm
             return dicionario;
         }
 
-        private bool VerificarCamposVeiculo() => Util.VerificarCamposUtil(DicionarioTextBoxVeiculo(CamposObg.Obrigatorio), new Dictionary<MaskedTextBox, string>(), DicionarioComboBoxVeiculo(CamposObg.Obrigatorio), new Dictionary<CheckBox, string>());
+        private Dictionary<CheckBox, string> DicionarioCheckBoxVeiculo()
+        {
+            Dictionary<CheckBox, string> dicionario = new Dictionary<CheckBox, string>();
+            dicionario.Add(chkGravarOffline, "Gravar offline");
 
-        private void LimparCamposVeiculo() => Util.LimparCamposUtil(DicionarioTextBoxVeiculo(CamposObg.NaoObrigatorio), new Dictionary<MaskedTextBox, string>(), DicionarioComboBoxVeiculo(CamposObg.NaoObrigatorio), new Dictionary<CheckBox, string>());
+            return dicionario;
+        }
+
+        private bool VerificarCamposVeiculo() => Util.VerificarCamposUtil(DicionarioTextBoxVeiculo(Util.CamposObg.NaoObrigatorio), null, DicionarioComboBoxVeiculo(Util.CamposObg.NaoObrigatorio));
+
+        private void LimparCamposVeiculo() => Util.LimparCamposUtil(DicionarioTextBoxVeiculo(Util.CamposObg.Obrigatorio), null, DicionarioComboBoxVeiculo(Util.CamposObg.Obrigatorio), DicionarioCheckBoxVeiculo());
 
         #endregion
     }

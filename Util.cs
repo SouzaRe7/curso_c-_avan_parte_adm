@@ -19,16 +19,28 @@ namespace VendasAdm
             form.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        public static void ControleTela(string tipo, Button btnCadastrar, Button btnAlterar, Button btnExcluir)
+        public enum CamposObg
+        {
+            Obrigatorio,
+            NaoObrigatorio
+        }
+
+        public enum AcaoBotao
+        {
+            Novo,
+            Editar
+        }
+
+        public static void ControleTela(Enum tipo, Button btnCadastrar, Button btnAlterar, Button btnExcluir)
         {
             switch (tipo)
             {
-                case "Inicial":
+                case AcaoBotao.Novo:
                     btnCadastrar.Enabled = true;
                     btnAlterar.Enabled = false;
                     btnExcluir.Enabled = false;
                     break;
-                case "Final":
+                case AcaoBotao.Editar:
                     btnCadastrar.Enabled = false;
                     btnAlterar.Enabled = true;
                     btnExcluir.Enabled = true;
@@ -186,59 +198,71 @@ namespace VendasAdm
             }
         }
 
-        public static bool VerificarCamposUtil(Dictionary<TextBox, string> dicionarioTexBox, Dictionary<MaskedTextBox, string> dicionarioMaskedTextBox, Dictionary<ComboBox, string> dicionarioComboBox, Dictionary<CheckBox, string> dicionarioCheckBox)
+        public static bool VerificarCamposUtil(Dictionary<TextBox, string> dicionarioTexBox = null, Dictionary<MaskedTextBox, string> dicionarioMaskedTextBox = null, Dictionary<ComboBox, string> dicionarioComboBox = null, Dictionary<CheckBox, string> dicionarioCheckBox = null)
         {
             bool ret = true;
             string campos = "";
 
             // Verificar TextBox vazias
-            if (dicionarioTexBox.Count > 0)
+            if (dicionarioTexBox != null)
             {
-                foreach (KeyValuePair<TextBox, string> par in dicionarioTexBox)
+                if (dicionarioTexBox.Count > 0)
                 {
-                    if (par.Key.Text.Trim() == String.Empty)
+                    foreach (KeyValuePair<TextBox, string> par in dicionarioTexBox)
                     {
-                        campos += "\n- " + par.Value;
-                        ret = false;
+                        if (par.Key.Text.Trim() == String.Empty)
+                        {
+                            campos += "\n- " + par.Value;
+                            ret = false;
+                        }
                     }
                 }
             }
 
             // Verificar MaskedTextBox vazias
-            if (dicionarioMaskedTextBox.Count > 0)
+            if (dicionarioMaskedTextBox != null)
             {
-                foreach (KeyValuePair<MaskedTextBox, string> par in dicionarioMaskedTextBox)
+                if (dicionarioMaskedTextBox.Count > 0)
                 {
-                    if (par.Key.Text.Trim() == String.Empty)
+                    foreach (KeyValuePair<MaskedTextBox, string> par in dicionarioMaskedTextBox)
                     {
-                        campos += "\n- " + par.Value;
-                        ret = false;
+                        if (par.Key.Text.Trim() == String.Empty)
+                        {
+                            campos += "\n- " + par.Value;
+                            ret = false;
+                        }
                     }
                 }
             }
 
             // Verificar ComboBox vazias
-            if (dicionarioComboBox.Count > 0)
+            if (dicionarioComboBox != null)
             {
-                foreach (KeyValuePair<ComboBox, string> par in dicionarioComboBox)
+                if (dicionarioComboBox.Count > 0)
                 {
-                    if (par.Key.SelectedItem == null || par.Key.SelectedItem.ToString().Trim() == String.Empty)
+                    foreach (KeyValuePair<ComboBox, string> par in dicionarioComboBox)
                     {
-                        campos += "\n- " + par.Value;
-                        ret = false;
+                        if (par.Key.SelectedItem == null || par.Key.SelectedItem.ToString().Trim() == String.Empty)
+                        {
+                            campos += "\n- " + par.Value;
+                            ret = false;
+                        }
                     }
                 }
             }
 
             // Verificar CheckBox não marcados
-            if (dicionarioCheckBox.Count > 0)
+            if (dicionarioCheckBox != null)
             {
-                foreach (KeyValuePair<CheckBox, string> par in dicionarioCheckBox)
+                if (dicionarioCheckBox.Count > 0)
                 {
-                    if (!par.Key.Checked)
+                    foreach (KeyValuePair<CheckBox, string> par in dicionarioCheckBox)
                     {
-                        campos += "\n- " + par.Value;
-                        ret = false;
+                        if (!par.Key.Checked)
+                        {
+                            campos += "\n- " + par.Value;
+                            ret = false;
+                        }
                     }
                 }
             }
@@ -251,41 +275,53 @@ namespace VendasAdm
             return ret;
         }
 
-        public static void LimparCamposUtil(Dictionary<TextBox, string> dicionarioTexBox, Dictionary<MaskedTextBox, string> dicionarioMaskedTextBox, Dictionary<ComboBox, string> dicionarioComboBox, Dictionary<CheckBox, string> dicionarioCheckBox)
+        public static void LimparCamposUtil(Dictionary<TextBox, string> dicionarioTexBox = null, Dictionary<MaskedTextBox, string> dicionarioMaskedTextBox = null, Dictionary<ComboBox, string> dicionarioComboBox = null, Dictionary<CheckBox, string> dicionarioCheckBox = null)
         {
             // Limpa o(s) TextBox
-            if (dicionarioTexBox.Count > 0)
+            if (dicionarioTexBox != null)
             {
-                foreach (KeyValuePair<TextBox, string> par in dicionarioTexBox)
+                if (dicionarioTexBox.Count > 0)
                 {
-                    par.Key.Clear();
+                    foreach (KeyValuePair<TextBox, string> par in dicionarioTexBox)
+                    {
+                        par.Key.Clear();
+                    }
                 }
             }
 
             // Limpa o(s) MaskedTextBox
-            if (dicionarioMaskedTextBox.Count > 0)
+            if (dicionarioMaskedTextBox != null)
             {
-                foreach (KeyValuePair<MaskedTextBox, string> par in dicionarioMaskedTextBox)
+                if (dicionarioMaskedTextBox.Count > 0)
                 {
-                    par.Key.Clear();
+                    foreach (KeyValuePair<MaskedTextBox, string> par in dicionarioMaskedTextBox)
+                    {
+                        par.Key.Clear();
+                    }
                 }
             }
 
             // Limpa o(s) ComboBox
-            if (dicionarioComboBox.Count > 0)
+            if (dicionarioComboBox != null)
             {
-                foreach (KeyValuePair<ComboBox, string> par in dicionarioComboBox)
+                if (dicionarioComboBox.Count > 0)
                 {
-                    par.Key.SelectedIndex = -1;
+                    foreach (KeyValuePair<ComboBox, string> par in dicionarioComboBox)
+                    {
+                        par.Key.SelectedIndex = -1;
+                    }
                 }
             }
 
             // Limpa o(s) CheckBox
-            if (dicionarioCheckBox.Count > 0)
+            if (dicionarioCheckBox != null)
             {
-                foreach (KeyValuePair<CheckBox, string> par in dicionarioCheckBox)
+                if (dicionarioCheckBox.Count > 0)
                 {
-                    par.Key.Checked = false;
+                    foreach (KeyValuePair<CheckBox, string> par in dicionarioCheckBox)
+                    {
+                        par.Key.Checked = false;
+                    }
                 }
             }
         }

@@ -67,6 +67,7 @@
             this.grdCores.RowTemplate.Height = 24;
             this.grdCores.Size = new System.Drawing.Size(904, 293);
             this.grdCores.TabIndex = 0;
+            this.grdCores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCores_CellClick);
             // 
             // groupBox1
             // 

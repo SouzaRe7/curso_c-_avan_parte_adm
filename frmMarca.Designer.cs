@@ -176,6 +176,7 @@
             this.grdMarcas.RowTemplate.Height = 24;
             this.grdMarcas.Size = new System.Drawing.Size(904, 293);
             this.grdMarcas.TabIndex = 0;
+            this.grdMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMarcas_CellClick);
             // 
             // frmMarca
             // 

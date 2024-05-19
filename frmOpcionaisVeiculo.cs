@@ -21,7 +21,7 @@ namespace VendasAdm
         private void frmOpcionaisVeiculo_Load(object sender, EventArgs e)
         {
             Util.ConfiguraDataGridViewUtil(grdOpcionais);
-            Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+            Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
         }
 
         private void btnCadastar_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace VendasAdm
             {
                 try
                 {
-                    Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+                    Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
                 }
                 catch
                 {
@@ -51,7 +51,7 @@ namespace VendasAdm
             {
                 try
                 {
-                    Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+                    Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
                 }
                 catch
                 {
@@ -63,23 +63,33 @@ namespace VendasAdm
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Util.ControleTela("Inicial", btnCadastar, btnAlterar, btnExcluir);
+            Util.ControleTela(Util.AcaoBotao.Novo, btnCadastar, btnAlterar, btnExcluir);
             LimparCamposOpconais();
+        }
+
+        private void grdOpcionais_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
         #endregion
 
         #region Funções
 
-        private Dictionary<TextBox, string> DicionarioTextBoxOpconais()
+        private Dictionary<TextBox, string> DicionarioTextBoxOpconais(Util.CamposObg obg)
         {
             Dictionary<TextBox, string> dicionario = new Dictionary<TextBox, string>();
             dicionario.Add(txtNome, "Nome");
+
+            if (obg == Util.CamposObg.Obrigatorio)
+            {
+                dicionario.Add(txtCodigo, "Codigo");
+            }
             return dicionario;
         }
 
-        private bool VerificarCamposOpconais() => Util.VerificarCamposUtil(DicionarioTextBoxOpconais(), new Dictionary<MaskedTextBox, string>(), new Dictionary<ComboBox, string>(), new Dictionary<CheckBox, string>());
+        private bool VerificarCamposOpconais() => Util.VerificarCamposUtil(DicionarioTextBoxOpconais(Util.CamposObg.NaoObrigatorio));
 
-        private void LimparCamposOpconais() => Util.LimparCamposUtil(DicionarioTextBoxOpconais(), new Dictionary<MaskedTextBox, string>(), new Dictionary<ComboBox, string>(), new Dictionary<CheckBox, string>());
+        private void LimparCamposOpconais() => Util.LimparCamposUtil(DicionarioTextBoxOpconais(Util.CamposObg.Obrigatorio));
 
         #endregion
     }

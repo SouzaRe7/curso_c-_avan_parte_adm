@@ -49,11 +49,7 @@ namespace VendasAdm
             return dicionario;
         }
 
-        /// <summary>
-        /// Função que verifica se os campos estão vasio tela Login
-        /// </summary>
-        /// <returns>bool</returns>
-        private bool VerificaCamposLogin()=> Util.VerificarCamposUtil(DicionarioTextBoxLogin(), new Dictionary<MaskedTextBox, string>(), new Dictionary<ComboBox, string>(), new Dictionary<CheckBox, string>());
+        private bool VerificaCamposLogin()=> Util.VerificarCamposUtil(DicionarioTextBoxLogin());
       
         #endregion
     }
