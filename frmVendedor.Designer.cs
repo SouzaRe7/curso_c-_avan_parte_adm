@@ -259,6 +259,7 @@
             this.chkStatusFiltro.TabIndex = 11;
             this.chkStatusFiltro.Text = "Ativo";
             this.chkStatusFiltro.UseVisualStyleBackColor = true;
+            this.chkStatusFiltro.CheckedChanged += new System.EventHandler(this.chkStatusFiltro_CheckedChanged);
             // 
             // txtNomeFiltro
             // 
@@ -266,6 +267,7 @@
             this.txtNomeFiltro.Name = "txtNomeFiltro";
             this.txtNomeFiltro.Size = new System.Drawing.Size(398, 34);
             this.txtNomeFiltro.TabIndex = 10;
+            this.txtNomeFiltro.TextChanged += new System.EventHandler(this.txtNomeFiltro_TextChanged);
             // 
             // label4
             // 

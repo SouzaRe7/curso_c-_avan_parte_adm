@@ -17,10 +17,7 @@ namespace VendasAdm
         /// </summary>
         /// <param name="arquivo"> Nome do arquivo xml </param>
         /// <returns> Caminho do arquivo </returns>
-        public static string PathFileDbXml(string arquivo)
-        {
-            return "C:\\Users\\Usuario\\Desktop\\curso_logica_c\\VendasAdm\\db_xml" + arquivo + ".xml";
-        }
+        public static string PathFileDbXml(string arquivo)=> "C:\\Users\\Usuario\\Desktop\\curso_logica_c\\VendasAdm\\db_xml\\" + arquivo + ".xml";
 
         /// <summary>
         /// Função que verifica se existe o código/id
@@ -54,28 +51,43 @@ namespace VendasAdm
         /// <param name="nomeTabela"> Nome do nó pai </param>
         /// <param name="nomeArquivo"> Nome do arquivo xml </param>
         /// <param name="novosValores"> Dicionario com o(s) nome(s) do(s) nó(s) filho(s) e seus valores (Dictionary<string, string>) </param>
-        public static void CadastrarUtilXML(string cod, string nomeTabela, string nomeArquivo, Dictionary<string, string> novosValores)
+        public static void CadastrarUtilXML(string nomeCampoId, string nomeTabela, string nomeArquivo, Dictionary<string, string> novosValores)
         {
             // Cria o objeto xml
             XmlDocument xml = new XmlDocument();
 
+            int cod;
+
             // Verifica se o arquivo não existe
             if (!File.Exists(XmlUtil.PathFileDbXml(nomeArquivo)))
             {
-                // Se o arquivo não existir, cria o elemento raiz "Pessoa"
+                // Se o arquivo não existir, cria o elemento raiz
                 XmlElement root = xml.CreateElement(nomeTabela);
                 xml.AppendChild(root);
+                cod = 1;
             }
             else
             {
                 xml.Load(XmlUtil.PathFileDbXml(nomeArquivo));
+
+                // Encontra todos os elementos "Item" e obtém o maior valor de nomeCampoId
+                XmlNodeList itemList = xml.SelectNodes($"{nomeTabela}/Item/{nomeCampoId}");
+                if (itemList.Count > 0)
+                {
+                    cod = itemList.Cast<XmlElement>()
+                                  .Max(e => int.Parse(e.InnerText)) + 1;
+                }
+                else
+                {
+                    cod = 1; // Inicia com 1, pois não há itens existentes
+                }
             }
 
             // Cria um novo elemento "Item" para a nova pessoa
             XmlElement infoItem = xml.CreateElement("Item");
 
-            XmlElement infoCodigo = xml.CreateElement("Codigo");
-            infoCodigo.InnerText = cod;
+            XmlElement infoCodigo = xml.CreateElement(nomeCampoId);
+            infoCodigo.InnerText = cod.ToString();
             infoItem.AppendChild(infoCodigo);
 
             // Adiciona os valores do dicionário como elementos filhos de "Item"
@@ -92,9 +104,6 @@ namespace VendasAdm
 
             // Salva as alterações no arquivo XML
             xml.Save(XmlUtil.PathFileDbXml(nomeArquivo));
-
-            // Exibe uma mensagem de sucesso
-            MessageBox.Show("Salvo com sucesso!", "Cadastro", MessageBoxButtons.OK);
         }
 
         /// <summary>
@@ -103,12 +112,12 @@ namespace VendasAdm
         /// <param name="cod"> Código/Id do nó filho </param>
         /// <param name="nomeArquivo"> Nome do arquivo xml </param>
         /// <param name="novosValores"> Dicionario com o(s) nome(s) do(s) nó(s) filho(s) e seus valores (Dictionary<string, string>) </param>
-        public static void AlterarUtilXML(string cod, string nomeArquivo, Dictionary<string, string> novosValores)
+        public static void AlterarUtilXML(string cod, string nomeCampoId, string nomeArquivo, Dictionary<string, string> novosValores)
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(XmlUtil.PathFileDbXml(nomeArquivo));
 
-            XmlNode xmlInfoAlt = xml.SelectSingleNode("//Item[Codigo='" + cod + "']");
+            XmlNode xmlInfoAlt = xml.SelectSingleNode("//Item["+ nomeCampoId + "='" + cod + "']");
 
             if (xmlInfoAlt != null)
             {
@@ -121,7 +130,6 @@ namespace VendasAdm
                     }
                 }
 
-                MessageBox.Show("Alteração realizada com sucesso!", "Alteração", MessageBoxButtons.OK);
                 xml.Save(XmlUtil.PathFileDbXml(nomeArquivo));
             }
         }
@@ -131,7 +139,7 @@ namespace VendasAdm
         /// </summary>
         /// <param name="dataGridView"> Nome do DataGridView </param>
         /// <param name="pathFile"> Caminho do arquivo xml </param>
-        public static void CarregarGrdUtilXML(DataGridView dataGridView, string pathFile)
+        public static void CarregarGrdUtilXML(DataGridView dataGridView, string pathFile, string nomeCampoId, string idEmpresaLogada)
         {
             dataGridView.DataSource = null;
 
@@ -143,8 +151,48 @@ namespace VendasAdm
 
                 if (data.Tables.Count > 0)
                 {
-                    dataGridView.DataSource = data.Tables[0];
+                    DataTable dataTable = data.Tables[0];
+                    string filterExpression = $"{nomeCampoId} = '{idEmpresaLogada}'";
+                    DataView dataView = new DataView(dataTable)
+                    {
+                        RowFilter = filterExpression
+                    };
+                    dataGridView.DataSource = dataView;   
                 }
+            } 
+            else
+            {
+                dataGridView.DataSource = new DataTable();
+            }
+        }
+
+        public static void CarregarRemoverCabecalhoListaUtilXML(DataGridView dataGridView, List<string> lista, string pathFile)
+        {
+            if (File.Exists(pathFile))
+            {
+                foreach (var item in lista)
+                {
+                    dataGridView.Columns[item].Visible = false;
+                }
+            }
+            else
+            {
+                dataGridView.DataSource = new DataTable();
+            }
+        }
+
+        public static void CarregarAlterarCabecalhoListaUtilXML(DataGridView dataGridView, Dictionary<string, string> dicionario, string pathFile)
+        {
+            if (File.Exists(pathFile))
+            {
+                foreach (KeyValuePair<string, string> par in dicionario)
+                {
+                    dataGridView.Columns[par.Key].HeaderText = par.Value;
+                }
+            }
+            else
+            {
+                dataGridView.DataSource = new DataTable();
             }
         }
 
@@ -153,24 +201,18 @@ namespace VendasAdm
         /// </summary>
         /// <param name="cod"> Código/Id do nó filho </param>
         /// <param name="nomeArquivo"> Nome do arquivo xml </param>
-        public static void ExcluirItemXmlUtl(string cod, string nomeArquivo)
+        public static void ExcluirItemXmlUtl(string cod, string nomeCampoId, string nomeArquivo)
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(XmlUtil.PathFileDbXml(nomeArquivo));
 
-            XmlNode xmlExcluir = xml.SelectSingleNode("//Item[Codigo='" + cod + "']");
+            XmlNode xmlExcluir = xml.SelectSingleNode("//Item["+ nomeCampoId + "='" + cod + "']");
 
             if (xmlExcluir != null)
             {
                 xmlExcluir.ParentNode.RemoveChild(xmlExcluir);
-                MessageBox.Show("Exclusão realizada com sucesso!", "Exclusão", MessageBoxButtons.OK);
                 xml.Save(XmlUtil.PathFileDbXml(nomeArquivo));
             }
-        }
-
-        internal static void CadastrarUtilXML()
-        {
-            throw new NotImplementedException();
         }
     }
 }

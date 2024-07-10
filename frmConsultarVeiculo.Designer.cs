@@ -137,7 +137,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 231);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1124, 402);
+            this.groupBox2.Size = new System.Drawing.Size(1124, 443);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultado encontrado";
@@ -150,7 +150,7 @@
             this.grdVeiculos.Name = "grdVeiculos";
             this.grdVeiculos.RowHeadersWidth = 51;
             this.grdVeiculos.RowTemplate.Height = 24;
-            this.grdVeiculos.Size = new System.Drawing.Size(1118, 369);
+            this.grdVeiculos.Size = new System.Drawing.Size(1118, 410);
             this.grdVeiculos.TabIndex = 0;
             // 
             // label1
@@ -158,7 +158,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(658, 203);
+            this.label1.Location = new System.Drawing.Point(624, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(472, 25);
             this.label1.TabIndex = 0;

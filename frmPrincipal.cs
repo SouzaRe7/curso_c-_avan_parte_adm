@@ -37,6 +37,11 @@ namespace VendasAdm
             new frmOpcionaisVeiculo().ShowDialog();
         }
 
+        private void tipoVeículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmTipoVeiculo().ShowDialog();
+        }
+
         private void gerenciarVendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmVendedor().ShowDialog();

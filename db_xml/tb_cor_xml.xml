@@ -1,0 +1,32 @@
+<tb_cor>
+  <Item>
+    <id_cor>105</id_cor>
+    <nome_cor>teste de alterar cor 105</nome_cor>
+    <id_empresa_cor>1</id_empresa_cor>
+    <id_usuario_cor>1</id_usuario_cor>
+  </Item>
+  <Item>
+    <id_cor>106</id_cor>
+    <nome_cor>hhhhhhhh</nome_cor>
+    <id_empresa_cor>1</id_empresa_cor>
+    <id_usuario_cor>1</id_usuario_cor>
+  </Item>
+  <Item>
+    <id_cor>107</id_cor>
+    <nome_cor>rererererere</nome_cor>
+    <id_empresa_cor>1</id_empresa_cor>
+    <id_usuario_cor>1</id_usuario_cor>
+  </Item>
+  <Item>
+    <id_cor>108</id_cor>
+    <nome_cor>jjjjj</nome_cor>
+    <id_empresa_cor>1</id_empresa_cor>
+    <id_usuario_cor>1</id_usuario_cor>
+  </Item>
+  <Item>
+    <id_cor>109</id_cor>
+    <nome_cor>new color here</nome_cor>
+    <id_empresa_cor>1</id_empresa_cor>
+    <id_usuario_cor>1</id_usuario_cor>
+  </Item>
+</tb_cor>

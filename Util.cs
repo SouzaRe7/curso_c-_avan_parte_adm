@@ -9,6 +9,16 @@ namespace VendasAdm
 {
     public static class Util
     {
+        public static int CodigoUsuarioLogado = 1;
+
+        public static int CodigoEmpresaLogado = 1;
+
+        public enum TipoUsuario
+        {
+            Admin,
+            Vendedor
+        }
+
         public static DateTime DataAtualUtil()
         {
             return DateTime.Now;
@@ -58,7 +68,7 @@ namespace VendasAdm
 
         public static void CarregarListaUtil<T>(DataGridView dataGridView, List<T> lista)
         {
-            dataGridView.DataSource = null;
+            //dataGridView.DataSource = null;
             dataGridView.DataSource = lista;
         }
 
@@ -69,6 +79,7 @@ namespace VendasAdm
 
         public static void CarregarRemoverCabecalhoLista(DataGridView dataGridView, List<string> lista)
         {
+
             foreach (var item in lista)
             {
                 dataGridView.Columns[item].Visible = false;
@@ -90,14 +101,14 @@ namespace VendasAdm
 
         public static void MsgSucessoUtil()
         {
-            MessageBox.Show("Salvo com sucesso!", "Sucesso", MessageBoxButtons.OK);
+            MessageBox.Show("Ação realizada com sucesso!", "Sucesso", MessageBoxButtons.OK);
         }
 
-        public static bool MsgExcluirItemUtil()
+        public static bool MsgExcluirItemUtil(string item)
         {
             bool ret = false;
 
-            if (MessageBox.Show("Deseja excluir?", "Confirmação da exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja excluir o item: '" + item + "'?", "Confirmação da exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ret = true;
             }
@@ -105,16 +116,16 @@ namespace VendasAdm
             return ret;
         }
 
-        public static void AplicarMascaraCpfUtil(DataGridView dataGridView)
+        public static void AplicarMascaraCpfUtil(DataGridView dataGridView, string nomeCampo)
         {
             // Percorre as linhas do grid para aplicar a máscara ao CPF
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                if (row.Cells["CPF"].Value != null)
+                if (row.Cells[nomeCampo].Value != null)
                 {
-                    string cpf = row.Cells["CPF"].Value.ToString();
+                    string cpf = row.Cells[nomeCampo].Value.ToString();
                     string cpfFormatado = FormatarCpfUtil(cpf);
-                    row.Cells["CPF"].Value = cpfFormatado;
+                    row.Cells[nomeCampo].Value = cpfFormatado;
                 }
             }
         }
@@ -138,15 +149,15 @@ namespace VendasAdm
             }
         }
 
-        public static void AplicarMascaraTelefoneCelularUtil(DataGridView dataGridView)
+        public static void AplicarMascaraTelefoneCelularUtil(DataGridView dataGridView, string nomeCampo)
         {
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                if (row.Cells["Celular"].Value != null)
+                if (row.Cells[nomeCampo].Value != null)
                 {
-                    string celular = row.Cells["Celular"].Value.ToString();
+                    string celular = row.Cells[nomeCampo].Value.ToString();
                     string celularFormatado = FormatarTelefoneCelularUtil(celular);
-                    row.Cells["Celular"].Value = celularFormatado;
+                    row.Cells[nomeCampo].Value = celularFormatado;
                 }
             }
         }
@@ -168,15 +179,15 @@ namespace VendasAdm
             }
         }
 
-        public static void AplicarMascaraTelefoneFixoUtil(DataGridView dataGridView)
+        public static void AplicarMascaraTelefoneFixoUtil(DataGridView dataGridView, string nomeCampo)
         {
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                if (row.Cells["Telefone"].Value != null)
+                if (row.Cells[nomeCampo].Value != null)
                 {
-                    string telefoneFixo = row.Cells["Telefone"].Value.ToString();
+                    string telefoneFixo = row.Cells[nomeCampo].Value.ToString();
                     string telefoneFixoFormatado = FormatarTelefoneFixoUtil(telefoneFixo);
-                    row.Cells["Telefone"].Value = telefoneFixoFormatado;
+                    row.Cells[nomeCampo].Value = telefoneFixoFormatado;
                 }
             }
         }

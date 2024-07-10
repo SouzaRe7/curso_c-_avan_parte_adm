@@ -50,9 +50,9 @@
             // 
             this.groupBox2.Controls.Add(this.grdCores);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 220);
+            this.groupBox2.Location = new System.Drawing.Point(12, 229);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(910, 326);
+            this.groupBox2.Size = new System.Drawing.Size(910, 371);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cores cadastradas";
@@ -65,7 +65,7 @@
             this.grdCores.Name = "grdCores";
             this.grdCores.RowHeadersWidth = 51;
             this.grdCores.RowTemplate.Height = 24;
-            this.grdCores.Size = new System.Drawing.Size(904, 293);
+            this.grdCores.Size = new System.Drawing.Size(904, 338);
             this.grdCores.TabIndex = 0;
             this.grdCores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCores_CellClick);
             // 
@@ -83,7 +83,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 202);
+            this.groupBox1.Size = new System.Drawing.Size(910, 211);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da cor";
@@ -92,7 +92,7 @@
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.Red;
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcluir.Location = new System.Drawing.Point(727, 145);
+            this.btnExcluir.Location = new System.Drawing.Point(727, 149);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(163, 38);
             this.btnExcluir.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAlterar.Location = new System.Drawing.Point(521, 145);
+            this.btnAlterar.Location = new System.Drawing.Point(521, 149);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(163, 38);
             this.btnAlterar.TabIndex = 4;
@@ -116,7 +116,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Gray;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancelar.Location = new System.Drawing.Point(310, 145);
+            this.btnCancelar.Location = new System.Drawing.Point(310, 149);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(163, 38);
             this.btnCancelar.TabIndex = 3;
@@ -128,7 +128,7 @@
             // 
             this.btnCadastar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCadastar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCadastar.Location = new System.Drawing.Point(114, 145);
+            this.btnCadastar.Location = new System.Drawing.Point(114, 149);
             this.btnCadastar.Name = "btnCadastar";
             this.btnCadastar.Size = new System.Drawing.Size(163, 38);
             this.btnCadastar.TabIndex = 2;
@@ -138,15 +138,15 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(194, 95);
+            this.txtNome.Location = new System.Drawing.Point(114, 85);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(696, 34);
+            this.txtNome.Size = new System.Drawing.Size(776, 34);
             this.txtNome.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(109, 94);
+            this.label3.Location = new System.Drawing.Point(29, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 29);
             this.label3.TabIndex = 0;
@@ -155,7 +155,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(194, 53);
+            this.txtCodigo.Location = new System.Drawing.Point(114, 43);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(126, 34);
             this.txtCodigo.TabIndex = 0;
@@ -163,7 +163,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 95);
+            this.label2.Location = new System.Drawing.Point(29, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 0;
@@ -172,17 +172,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 53);
+            this.label1.Location = new System.Drawing.Point(16, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código";
             // 
             // frmCor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 556);
+            this.ClientSize = new System.Drawing.Size(934, 612);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

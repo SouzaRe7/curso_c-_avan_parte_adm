@@ -19,3 +19,12 @@ C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmOpciona
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmPrincipal.resources
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmSubirOnLine.resources
 C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmVeiculo.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.frmTipoVeiculo.resources
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\DAO.dll
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\DAO.pdb
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\DAO.dll.config
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\curso_logica_c\VendasAdm\obj\Debug\VendasAdm.csproj.CopyComplete

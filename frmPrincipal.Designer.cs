@@ -44,6 +44,7 @@
             this.vendasVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tipoVeículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +71,8 @@
             this.coresToolStripMenuItem,
             this.marcasToolStripMenuItem,
             this.modelosToolStripMenuItem,
-            this.opcionaisToolStripMenuItem});
+            this.opcionaisToolStripMenuItem,
+            this.tipoVeículosToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(129, 35);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -78,28 +80,28 @@
             // coresToolStripMenuItem
             // 
             this.coresToolStripMenuItem.Name = "coresToolStripMenuItem";
-            this.coresToolStripMenuItem.Size = new System.Drawing.Size(204, 36);
+            this.coresToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.coresToolStripMenuItem.Text = "Cores";
             this.coresToolStripMenuItem.Click += new System.EventHandler(this.coresToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(204, 36);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // modelosToolStripMenuItem
             // 
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
-            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(204, 36);
+            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.modelosToolStripMenuItem.Text = "Modelos";
             this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
             // 
             // opcionaisToolStripMenuItem
             // 
             this.opcionaisToolStripMenuItem.Name = "opcionaisToolStripMenuItem";
-            this.opcionaisToolStripMenuItem.Size = new System.Drawing.Size(204, 36);
+            this.opcionaisToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.opcionaisToolStripMenuItem.Text = "Opcionais";
             this.opcionaisToolStripMenuItem.Click += new System.EventHandler(this.opcionaisToolStripMenuItem_Click);
             // 
@@ -174,6 +176,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // tipoVeículosToolStripMenuItem
+            // 
+            this.tipoVeículosToolStripMenuItem.Name = "tipoVeículosToolStripMenuItem";
+            this.tipoVeículosToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
+            this.tipoVeículosToolStripMenuItem.Text = "Tipo veículos";
+            this.tipoVeículosToolStripMenuItem.Click += new System.EventHandler(this.tipoVeículosToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,5 +222,6 @@
         private System.Windows.Forms.ToolStripMenuItem vendasVeículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem tipoVeículosToolStripMenuItem;
     }
 }
